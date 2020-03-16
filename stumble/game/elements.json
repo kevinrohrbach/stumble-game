@@ -1,0 +1,463 @@
+{
+    "rooms": [
+        {
+            "key": "bedroom",
+            "name": "Bedroom",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "madroom",
+                "E": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content":[
+                "bed",
+                "lamp"
+            ],
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "madroom",
+            "name": "Madman's Room",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "S": "bedroom",
+                "W": "dwarfroom",
+                "U": null,
+                "D": null
+            },
+            "character": "Madman",
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "dwarfroom",
+            "name": "Dwarf's Cavern",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": "onjetty",
+                "SE": "wellroom",
+                "S": "madroom",
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": "Dwarf",
+            "content": [
+                "Sledgehammer"
+            ],
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "floorroom",
+            "name": "Room with Rushing Water",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": "gallery",
+                "SE": null,
+                "S": "wallroom",
+                "W": "bedroom",
+                "U": null,
+                "D": "river"
+            },
+            "character": null,
+            "content": null,
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "gallery",
+            "name": "Gallery Overlooking the Underground River",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "wellroom",
+                "E": null,
+                "SE": null,
+                "S": "floorroom",
+                "W": null,
+                "U": null,
+                "D": "river2"
+            },
+            "character": null,
+            "content": null,
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "wellroom",
+            "name": "Room with a Well",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": "larder",
+                "SE": null,
+                "S": "northpit",
+                "W": null,
+                "U": null,
+                "D": "dwarfroom"
+            },
+            "character": null,
+            "content": null,
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "larder",
+            "name": "A larder",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "wellroom",
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content": [
+                "bread",
+                "cheese",
+                "turkey",
+                "wine"
+            ], 
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "northpit",
+            "name": "North of a Snake Pit",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "wellroom",
+                "E": null,
+                "SE": null,
+                "S": "southpit",
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content": "rope",
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "wallroom",
+            "name": "Room with a Crumbling Wall",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "southpit",
+                "E": "boudoir",
+                "SE": null,
+                "S": "trollbridge",
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content": null,
+            "light": false,
+            "visits": false,
+            "wall": true
+        },
+        {
+            "key": "boudoir",
+            "name": "Room with a Crumbling Wall",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": "wallroom",
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content": null,
+            "light": false,
+            "visits": false,
+            "wall": true
+        },
+        {
+            "key": "trollbridge",
+            "name": "Bridge over Underground River",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "inn",
+                "E": "wallroom",
+                "SE": null,
+                "S": null,
+                "W": "stairwell",
+                "U": null,
+                "D": "river1"
+            },
+            "character": "troll",
+            "content": null,
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "river1",
+            "name": "In the River",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": "river2",
+                "L": null,
+                "R": null
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "river2",
+            "name": "In the River",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": "river3",
+                "L": null,
+                "R": "galleryladder"
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "river3",
+            "name": "In the River",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": "river3",
+                "L": "underjetty",
+                "R": null
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "river4",
+            "name": "In the River",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": "waterfall",
+                "L": null,
+                "R": null
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "waterfall",
+            "name": "Tumbling down a Waterfall",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content": null,
+            "light": false,
+            "visits": false
+        },
+        {
+            "key": "underjetty",
+            "name": "Hanging on under a jetty",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": null,
+                "U": "onjetty",
+                "D": "river4"
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "onjetty",
+            "name": "On a Jetty by an underground river",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "W": "dwarfroom",
+                "U": null,
+                "D": "underjetty"
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "southinn",
+            "name": "South of an underground inn",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": "inn",
+                "E": "trollbridge",
+                "SE": null,
+                "S": null,
+                "SW": null,
+                "W": "stairwell",
+                "U": null,
+                "D": null
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "inn",
+            "name": "A lively underground inn",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": "southinn",
+                "SW": null,
+                "W": null,
+                "U": null,
+                "D": null
+            },
+            "character": "goblin",
+            "content": "booze",
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "stairwellbottom",
+            "name": "At the bottom of a long stairwell",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": "southinn",
+                "SE": null,
+                "S": null,
+                "SW": null,
+                "W": null,
+                "U": "stairwellmiddle",
+                "D": null
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "stairwellmiddle",
+            "name": "Halfway up the stairwell",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": "bedroom",
+                "SE": null,
+                "S": null,
+                "SW": null,
+                "W": null,
+                "U": "stairwelltop",
+                "D": "stairwellbottom"
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "stairwelltop",
+            "name": "The top of the stairwell",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "SW": null,
+                "W": null,
+                "U": "freedom",
+                "D": "stairwellmiddle"
+            },
+            "character": "goblin",
+            "content": "booze",
+            "light": true,
+            "visits": false
+        },
+        {
+            "key": "freedom",
+            "name": "Dailight",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "exits": {
+                "N": null,
+                "E": null,
+                "SE": null,
+                "S": null,
+                "SW": null,
+                "W": null,
+                "U": null,
+                "D": "stairwelltop"
+            },
+            "character": null,
+            "content": null,
+            "light": true,
+            "visits": false
+        }
+    ],
+    "characters":[
+        
+    ]
+}
