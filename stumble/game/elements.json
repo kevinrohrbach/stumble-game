@@ -1,5 +1,5 @@
 {
-  "rooms": [{
+  "rooms": {
     "bedroom": {
       "name": "Bedroom",
       "description_light": "This is a dimly lit windowless room. You are sitting on the edge of a bed. In the dull beam of the lamp hung on the wall you can see a door ajar with darkness extending behind it to the north and another closed door to the east.",
@@ -10,7 +10,7 @@
         "S": null,
         "W": null,
         "U": null,
-        "D": "stairwellmiddle"
+        "D": null 
       },
       "character": null,
       "content":["bed", "lamp"],
@@ -466,8 +466,8 @@
       "light": true,
       "visits": false
     }
-  }],
-  "characters": [{
+  },
+  "characters": {
     "madman": {
       "name": "Madman",
       "description": ""
@@ -475,10 +475,9 @@
     "dwarf": {
       "name": "Dwarf",
       "description": ""
-    },
-    
-  }],
-  "items": [
+    }
+  },
+  "items": {
 
-  ]
+  }
 }
