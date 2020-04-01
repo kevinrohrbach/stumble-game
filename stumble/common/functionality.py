@@ -1,0 +1,53 @@
+"""Define core functionality of game."""
+
+import json
+from os import path
+import common
+
+
+SAVEGAME_FILENAME = "game/savegame.json"
+
+
+# Load, save, initialise game state #
+def load_game():
+    """Load game state."""
+    command = input("Do you want to load your existing game? (y/n)\n> ")
+    if command == "y":
+        with open(SAVEGAME_FILENAME, 'r') as savegame:
+            state = json.load(savegame)
+        return state
+    initialize_game()
+
+
+def save_game():
+    """Save the current game state."""
+    global game_state
+    with open(SAVEGAME_FILENAME, 'w') as savegame:
+        savegame.write(json.dump(game_state))
+
+
+def initialize_game():
+    """Initialise game state if no game exists."""
+    with open("game/elements.json") as universe:
+        state = json.load(universe)
+    return state
+# END game state manipulation ----------- #
+
+
+def start():
+    """Define game start function."""
+    global game_state
+    if not path.isfile(SAVEGAME_FILENAME):
+        game_state = initialize_game()
+    else:
+        game_state = load_game()
+
+
+# World building ------------------------ #
+def build_rooms(data):
+    """Build rooms out of JSON."""
+    rooms = []
+    for location in data['rooms']:
+        room = common.Room(data, location)
+        rooms.append(room)
+    return rooms
