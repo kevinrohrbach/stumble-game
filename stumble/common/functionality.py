@@ -28,7 +28,7 @@ def save_game():
 
 def initialize_game():
     """Initialise game state if no game exists."""
-    with open("game/elements.json") as universe:
+    with open("./game/elements.json") as universe:
         state = json.load(universe)
     return state
 # END game state manipulation ----------- #
@@ -41,13 +41,13 @@ def start():
         game_state = initialize_game()
     else:
         game_state = load_game()
+    return game_state
 
 
 # World building ------------------------ #
 def build_rooms(data):
     """Build rooms out of JSON."""
-    rooms = []
+    rooms = {}
     for location in data['rooms']:
-        room = common.Room(data, location)
-        rooms.append(room)
+        rooms.update({location: common.Room(data, location)})
     return rooms

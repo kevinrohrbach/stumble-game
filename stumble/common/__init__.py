@@ -1,5 +1,4 @@
 """Import classes."""
 
-from .room import Room
-from .character import Character, Player
-from .item import Item
+import common.functionality
+from common.classes import Room, Character, Player, Item

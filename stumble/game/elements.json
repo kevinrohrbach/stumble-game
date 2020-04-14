@@ -2,15 +2,15 @@
   "rooms": {
     "bedroom": {
       "name": "Bedroom",
-      "description_light": "This is a dimly lit windowless room. You are sitting on the edge of a bed. In the dull beam of the lamp hung on the wall you can see a door ajar with darkness extending behind it to the north and another closed door to the east.",
-      "description_dark": null,
+      "descr_light": "This is a dimly lit windowless room. You are sitting on the edge of a bed. In the dull beam of the lamp hung on the wall you can see a door ajar with darkness extending behind it to the north and another closed door to the east.",
+      "descr_dark": null,
       "exits": {
         "N": "madroom",
         "E": "floorroom",
         "S": null,
         "W": null,
         "U": null,
-        "D": null 
+        "D": null
       },
       "character": null,
       "content":["bed", "lamp"],
@@ -19,8 +19,8 @@
     },
     "madroom": {
       "name": "Madman's Room",
-      "description_light": "You have entered a room with a raving lunatic sat banging his head against the north wall. There is an additional exit visible in the gloom to the east. You're unsure whether you should risk making the madman aware of your presence or whether to sneak past him.",
-      "description_dark": null,
+      "descr_light": "You have entered a room with a raving lunatic sat banging his head against the north wall. There is an additional exit visible in the gloom to the east. You're unsure whether you should risk making the madman aware of your presence or whether to sneak past him.",
+      "descr_dark": null,
       "exits": {
           "N": null,
           "E": null,
@@ -36,8 +36,8 @@
     },
     "dwarfroom": {
       "name": "Dwarf's Cavern",
-      "description_light": "You are in a small cavern. It turns out you're sharing it with an angry looking dwarf stood in the northeast corner. The dwarf is holding a wicked looking sledgehammer and staring at you menacingly. A confrontation seems unavoidable.",
-      "description_dark": null,
+      "descr_light": "You are in a small cavern. It turns out you're sharing it with an angry looking dwarf stood in the northeast corner. The dwarf is holding a wicked looking sledgehammer and staring at you menacingly. A confrontation seems unavoidable.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": "onjetty",
@@ -54,8 +54,8 @@
     },
     "floorroom": {
       "name": "Room with Rushing Water",
-      "description_light": "This is a room that is dominated by a rushing sound. Just as you're about to take your next step you notice that most of the floor is missing. You can see moving water underneath illuminated by your lamp.",
-      "description_dark": "This is a room that is dominated by a rushing sound. You hesitantly take a step forwards, but where the floor should be your foot meets no resistance you stumble forward and fall through the large hole you didn't see in the dark. After what seems like a lifetime you plunge into the water and are swept away in its torrent.",
+      "descr_light": "This is a room that is dominated by a rushing sound. Just as you're about to take your next step you notice that most of the floor is missing. You can see moving water underneath illuminated by your lamp.",
+      "descr_dark": "This is a room that is dominated by a rushing sound. You hesitantly take a step forwards, but where the floor should be your foot meets no resistance you stumble forward and fall through the large hole you didn't see in the dark. After what seems like a lifetime you plunge into the water and are swept away in its torrent.",
       "exits": {
         "N": null,
         "E": "gallery",
@@ -72,8 +72,8 @@
     },
     "gallery": {
       "name": "Gallery Overlooking the Underground River",
-      "description_light": "This is a wider space. A gallery of sorts. There is an opening on the west side and you can hear the sound of the river below. The only other exit is on the north end of the room.",
-      "description_dark": "This is a wider space. You sense an opening to the east and hear a rushing sound from that side. There is a faint glow of light coming through an opening to the north.",
+      "descr_light": "This is a wider space. A gallery of sorts. There is an opening on the west side and you can hear the sound of the river below. The only other exit is on the north end of the room.",
+      "descr_dark": "This is a wider space. You sense an opening to the east and hear a rushing sound from that side. There is a faint glow of light coming through an opening to the north.",
       "exits": {
         "N": "wellroom",
         "E": null,
@@ -90,8 +90,8 @@
     },
     "wellroom": {
       "name": "Room with a Well",
-      "description_light": "You're in a large room with what looks like a well in the northwest corner. There seems to be a ladder down the inside of the well. There are two further doors besides the one you came through; one to the east, and one to the south.",
-      "description_dark": null,
+      "descr_light": "You're in a large room with what looks like a well in the northwest corner. There seems to be a ladder down the inside of the well. There are two further doors besides the one you came through; one to the east, and one to the south.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": "larder",
@@ -108,8 +108,8 @@
     },
     "larder": {
       "name": "A larder",
-      "description_light": "You are in a room with food piled from the floor to the rafters. Shelves and shelves of simple fare and the greatest of delicacies. Even just the smell is overwhelming after the hours spent in this under ground warren. There are no exits other than the one you came through.",
-      "description_dark": null,
+      "descr_light": "You are in a room with food piled from the floor to the rafters. Shelves and shelves of simple fare and the greatest of delicacies. Even just the smell is overwhelming after the hours spent in this under ground warren. There are no exits other than the one you came through.",
+      "descr_dark": null,
       "exits": {
         "N": "wellroom",
         "E": null,
@@ -126,8 +126,8 @@
     },
     "northpit": {
       "name": "North of a Snake Pit",
-      "description_light": "This is the north edge of what appears to be a large pit. You hear a hissing from below but aren't sure what is causing it. In the distance you can just make out the opposite edge of the pit. There is a rope spanning the darkness.",
-      "description_dark": "Walking through the dark you become aware of what seems like a faint hissing sound ahead of you. You slow down and take one tentative step after the other until suddenly your foot meets no resistance and you tumble into darkness.",
+      "descr_light": "This is the north edge of what appears to be a large pit. You hear a hissing from below but aren't sure what is causing it. In the distance you can just make out the opposite edge of the pit. There is a rope spanning the darkness.",
+      "descr_dark": "Walking through the dark you become aware of what seems like a faint hissing sound ahead of you. You slow down and take one tentative step after the other until suddenly your foot meets no resistance and you tumble into darkness.",
       "exits": {
         "N": "wellroom",
         "E": null,
@@ -144,8 +144,8 @@
     },
     "wallroom": {
       "name": "Room with a Crumbling Wall",
-      "description_light": "This is a simple room with exits to the north east and west. The south wall looks in pretty bad shape and may give way with the right kind of persuasion.",
-      "description_dark": null,
+      "descr_light": "This is a simple room with exits to the north east and west. The south wall looks in pretty bad shape and may give way with the right kind of persuasion.",
+      "descr_dark": null,
       "exits": {
         "N": "southpit",
         "E": "boudoir",
@@ -163,8 +163,8 @@
     },
     "boudoir": {
       "name": "Boudoir",
-      "description_light": "What hits you first is the smell. You are in a room that seems to consist of soft furniture, gauzy hangings, and candlelight. The heady aroma of perfume mixed with something more...primal permeates the air. You are not alone. Through one of the drapes you can see the a woman reclining on a bed smiling at you.",
-      "description_dark": null,
+      "descr_light": "What hits you first is the smell. You are in a room that seems to consist of soft furniture, gauzy hangings, and candlelight. The heady aroma of perfume mixed with something more...primal permeates the air. You are not alone. Through one of the drapes you can see the a woman reclining on a bed smiling at you.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -182,8 +182,8 @@
     },
     "trollbridge": {
       "name": "Bridge over Underground River",
-      "description_light": "This is a large cavern with a bridge over an underground river. To the north the river disappears into a cave. You can see an inn on the other side of the river. But inbetween you and a stout ale stands a troll blocking your path over the river.",
-      "description_dark": null,
+      "descr_light": "This is a large cavern with a bridge over an underground river. To the north the river disappears into a cave. You can see an inn on the other side of the river. But inbetween you and a stout ale stands a troll blocking your path over the river.",
+      "descr_dark": null,
       "exits": {
         "N": "inn",
         "E": "wallroom",
@@ -200,8 +200,8 @@
     },
     "river1": {
       "name": "In the River",
-      "description_light": "After a short flight through the air you land in the rushing river and are swept downstream into the cave. A faint glow throws the walls into stark relief. Just a few seconds later you pass under a large hole in the ceiling, but there is no way to grab a hold. ",
-      "description_dark": null,
+      "descr_light": "After a short flight through the air you land in the rushing river and are swept downstream into the cave. A faint glow throws the walls into stark relief. Just a few seconds later you pass under a large hole in the ceiling, but there is no way to grab a hold. ",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -220,8 +220,8 @@
     },
     "river2": {
       "name": "In the River",
-      "description_light": "The swiftly moving river is pulling you downstream. In a panic you look around for a way out but there are just smooth walls on either side. After a short while you see a patch of light high on the right hand wall. A second later you notice a ladder extending down from the hole to the level of the river.",
-      "description_dark": null,
+      "descr_light": "The swiftly moving river is pulling you downstream. In a panic you look around for a way out but there are just smooth walls on either side. After a short while you see a patch of light high on the right hand wall. A second later you notice a ladder extending down from the hole to the level of the river.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -240,8 +240,8 @@
     },
     "galleryladder": {
       "name": "Ladder below the gallery",
-      "description_light": "This is the bottom rung of a ladder. The light of the gallery illuminates the opposite wall above you. Downstream on the other side you can see a jetty jutting into the current. If you jump into the river from here and swim for your life, you may make it to the jetty - on a good day.",
-      "description_dark": null,
+      "descr_light": "This is the bottom rung of a ladder. The light of the gallery illuminates the opposite wall above you. Downstream on the other side you can see a jetty jutting into the current. If you jump into the river from here and swim for your life, you may make it to the jetty - on a good day.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -260,8 +260,8 @@
     },
     "river3": {
       "name": "In the River",
-      "description_light": "The wild current is pulling you downstream towards the ever increasing noise of what sounds suspiciusly like a waterfall. A jetty is approaching quickly on the left bank.",
-      "description_dark": null,
+      "descr_light": "The wild current is pulling you downstream towards the ever increasing noise of what sounds suspiciusly like a waterfall. A jetty is approaching quickly on the left bank.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -280,8 +280,8 @@
     },
     "river4": {
       "name": "In the River",
-      "description_light": "As you're pulled downstream the jetty disappears around a corner behind you. The noise of the waterfall is growing louder and louder filling your senses with its inevability.",
-      "description_dark": null,
+      "descr_light": "As you're pulled downstream the jetty disappears around a corner behind you. The noise of the waterfall is growing louder and louder filling your senses with its inevability.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -300,8 +300,8 @@
     },
     "waterfall": {
       "name": "The Waterfall",
-      "description_light": "This is the lip of a giant underground waterfall. After what seems like a lifetime of ever growing noise you have met an end.",
-      "description_dark": null,
+      "descr_light": "This is the lip of a giant underground waterfall. After what seems like a lifetime of ever growing noise you have met an end.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -318,8 +318,8 @@
     },
     "underjetty": {
       "name": "Hanging on under a jetty",
-      "description_light": "You are hanging for dear life to a rope attached to the jetty while the river is trying to pull you downstream.",
-      "description_dark": null,
+      "descr_light": "You are hanging for dear life to a rope attached to the jetty while the river is trying to pull you downstream.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -336,8 +336,8 @@
     },
     "onjetty": {
       "name": "On a Jetty by an underground river",
-      "description_light": "This is the edge of a jetty in an underground river flowing roughly from south to north. Downstream you can hear the faint roar of a waterfall. Looking upstream you can see light coming through a large opening high up on the opposite bank. There doesn't seem to be any way of reaching it.",
-      "description_dark": null,
+      "descr_light": "This is the edge of a jetty in an underground river flowing roughly from south to north. Downstream you can hear the faint roar of a waterfall. Looking upstream you can see light coming through a large opening high up on the opposite bank. There doesn't seem to be any way of reaching it.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -354,8 +354,8 @@
     },
     "southinn": {
       "name": "South of an underground inn",
-      "description_light": "You are standing south of an underground inn. Judging by the noise there's some fine drink to be had inside. To the east, there is a bridge spanning a river. To the west a large opening in the cavern wall.",
-      "description_dark": null,
+      "descr_light": "You are standing south of an underground inn. Judging by the noise there's some fine drink to be had inside. To the east, there is a bridge spanning a river. To the west a large opening in the cavern wall.",
+      "descr_dark": null,
       "exits": {
         "N": "inn",
         "E": "trollbridge",
@@ -373,8 +373,8 @@
     },
     "inn": {
       "name": "A lively underground inn",
-      "description_light": "Raucous laughter greets you as you enter the inn. Since you have no coin you're not really sure what your doing here. Just as your about to turn to leave you catch a goblin staring at you. With a smirk he waves you over.",
-      "description_dark": null,
+      "descr_light": "Raucous laughter greets you as you enter the inn. Since you have no coin you're not really sure what your doing here. Just as your about to turn to leave you catch a goblin staring at you. With a smirk he waves you over.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -392,8 +392,8 @@
     },
     "staircasebottom": {
       "name": "At the bottom of a long spiral staircase",
-      "description_light": "This is the bottom of a giant spiral stairase. Behind you to the east you can still hear the noise the drinking in the distance.",
-      "description_dark": null,
+      "descr_light": "This is the bottom of a giant spiral stairase. Behind you to the east you can still hear the noise the drinking in the distance.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": "southinn",
@@ -411,8 +411,8 @@
     },
     "staircasemiddle": {
       "name": "Halfway up the spiral staircase",
-      "description_light": "You're on a giant spiral staircase. You can't hear or see much of anything up or down the staircase. Beside you on the east wall a section of wall has broken away revealing a dark hole leading off into the distance.",
-      "description_dark": null,
+      "descr_light": "You're on a giant spiral staircase. You can't hear or see much of anything up or down the staircase. Beside you on the east wall a section of wall has broken away revealing a dark hole leading off into the distance.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": "bedroom",
@@ -430,8 +430,8 @@
     },
     "staircasetop": {
       "name": "The top of the giant spiral staircase",
-      "description_light": "This is the top landing of a giant underground spiral staircase. The steps descend clockwise into the depths. On the north end of the landing there is a hole in the waLL. The light coming through the hole is illuminating everything around you.",
-      "description_dark": null,
+      "descr_light": "This is the top landing of a giant underground spiral staircase. The steps descend clockwise into the depths. On the north end of the landing there is a hole in the waLL. The light coming through the hole is illuminating everything around you.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -449,8 +449,8 @@
     },
     "freedom": {
       "name": "Dailight",
-      "description_light": "Your first breath of fresh air feels sweet in your lungs. After what seems like a lifetime you can finally see the sky. You vow that from now on you'll never get into a situation again where you're stumbling through the dark.",
-      "description_dark": null,
+      "descr_light": "Your first breath of fresh air feels sweet in your lungs. After what seems like a lifetime you can finally see the sky. You vow that from now on you'll never get into a situation again where you're stumbling through the dark.",
+      "descr_dark": null,
       "exits": {
         "N": null,
         "E": null,
@@ -467,17 +467,23 @@
       "visits": false
     }
   },
-  "characters": {
+  "characters": [{
     "madman": {
       "name": "Madman",
-      "description": ""
+      "descr": ""
     },
     "dwarf": {
       "name": "Dwarf",
-      "description": ""
+      "descr": ""
     }
-  },
-  "items": {
+  }],
+  "items": [{
 
+  }],
+  "player": {
+    "name": null,
+    "room": "bedroom",
+    "madness": 0,
+    "inventory": []
   }
 }

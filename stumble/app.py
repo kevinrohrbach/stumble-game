@@ -1,62 +1,67 @@
 """Run the game."""
 
-from sys import exit
-from os import path
-import json
-import jsonpickle
+# Import modules ----------------#
+# from sys import exit
+# import json
 
 # Import classes --------------- #
 import common
 
 # load universe ---------------- #
-with open("game/elements.json") as elements:
-    universe = json.load(elements)
+# with open("game/elements.json") as elements:
+#     universe = json.load(elements)
 
+game_state = dict()
+rooms = dict()
 
 # Starting values -------------- #
 playerName = "Kevin"  # input('> ')
-room = "bedroom"
+room = 'bedroom'
 
-"""Create and place player."""
-player = common.Player(playerName, room)
-player.name = playerName
-player.room = common.Room(universe, room)
-player.madness = 0
-player.inventory = []
-
-# Create save file
+player = common.Player(game_state, playerName, room)
 
 
-# Main game --------------------- #
+# # Main game --------------------- #
 def game_loop():
     """Define main game loop."""
     dead = False
+    global game_state
 
     while dead is False:
+        if player.room.visits is False:
+            common.Room.get_details(player.room)
+            common.Room.set_visit(player.room, True)
+            print(rooms)
+            # game_state.update({'player': {'room': {'visits': True}}})
+            # print(game_state)
         command = input('\n> ')
         if command in {'N', 'E', 'S', 'W'}:
             player_move = player.move(command)
+            print(player_move)
+            print(rooms)
             if player_move is not None:
-                player.room = common.Room(universe, player_move)
+                player.room = rooms[player_move]
             pass
         elif command == 'look':
             print(player.room.descr_light)
+        elif command == 'print':
+            print(game_state)
         else:
             print('Invalid command.')
     dead = True
     exit(0)
 
 
-# Main function -------------- #
+# Main function ------------------ #
 def main():
-    """Define main function. Currently only calling game loop."""
-    # global game_state
-    # if not os.path.isfile(SAVEGAME_FILENAME):
-    #     game_state = initialize_game()
-    # else:
-    #     game_state = load_game()
+    """Define main function. Load State. Start game."""
+    global game_state
+
+    game_state = dict(common.functionality.start())
+    rooms = common.functionality.build_rooms(game_state)
+    print(rooms)
+    player.room = rooms[room]
     game_loop()
-# TODO: Add load, initialise
 
 
 if __name__ == '__main__':
