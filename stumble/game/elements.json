@@ -19,7 +19,7 @@
     },
     "madroom": {
       "name": "Madman's Room",
-      "descr_light": "You have entered a room with a raving lunatic sat banging his head against the north wall. There is an additional exit visible in the gloom to the east. You're unsure whether you should risk making the madman aware of your presence or whether to sneak past him.",
+      "descr_light": "You have entered a room with a raving lunatic sat banging his head against the north wall. There is an additional exit visible in the gloom to the west. You're unsure whether you should risk making the madman aware of your presence or whether to sneak past him.",
       "descr_dark": null,
       "exits": {
           "N": null,

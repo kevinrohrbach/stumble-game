@@ -1,0 +1,11 @@
+
+
+This is a list of commands at your disposal
+===========================================
+
+Movement
+--------
+
+Cardinals and ordinals, i.e. N, NE, E, SE, S, SW, W, NW
+
+To be continued...

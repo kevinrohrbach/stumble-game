@@ -16,14 +16,17 @@ class Room():
         self.character = None
         self.content = game_state['rooms'][room]['content']
         self.light = None
-        self.visits = False
+        self.visits = False  # TODO: numbers instead of boolean?
 
     def get_name(self):
         """Get current room name."""
+        print('\n')
         print(self.name)
+        print("----------------")
 
     def get_details(self):
         """Get full details of room."""
+        print('\n')
         print(self.name)
         print("----------------")
         print(self.descr_light)
@@ -62,7 +65,7 @@ class Player(Character):
     def move(self, direction):
         """Define player's movement."""
         if self.room.exits[direction] is None:
-            print("Cannot move in that direction!")
+            print(f"You can't go there {self.name}.")
             return
         return self.room.exits[direction]
 

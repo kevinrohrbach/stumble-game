@@ -22,8 +22,12 @@ def load_game():
 def save_game():
     """Save the current game state."""
     global game_state
-    with open(SAVEGAME_FILENAME, 'w') as savegame:
-        savegame.write(json.dump(game_state))
+    print('You seriously want to chicken out and save?')
+    command = input('\n>')
+    if command == 'y':
+        with open(SAVEGAME_FILENAME, 'w') as savegame:
+            savegame.write(json.dump(game_state))
+    pass
 
 
 def initialize_game():
@@ -51,3 +55,10 @@ def build_rooms(data):
     for location in data['rooms']:
         rooms.update({location: common.Room(data, location)})
     return rooms
+
+
+# Help File ----------------------------- #
+def show_help():
+    """Show in-game help."""
+    with open('./common/commands.txt', 'r') as help:
+        print(help.read())
