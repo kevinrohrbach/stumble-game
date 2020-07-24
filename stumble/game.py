@@ -1,31 +1,29 @@
 """Run the game."""
 
-# Import modules ----------------#
-# from sys import exit
-# import json
+# Import modules ---------------- #
+from sys import exit
 
 # Import classes --------------- #
 import common
 
 # load universe ---------------- #
-# with open("game/elements.json") as elements:
-#     universe = json.load(elements)
 
 game_state = dict()
 rooms = dict()
+characters = dict()
+items = dict()
 
-# Starting values -------------- #
-playerName = "Kevin"  # input('> ')
-room = 'bedroom'
-
-player = common.Player(game_state, playerName, room)
+playerName = None
+player = common.Player(game_state, playerName)
 
 
 # # Main game --------------------- #
 def game_loop():
     """Define main game loop."""
     dead = False
-    global game_state, rooms
+    global game_state, rooms, characters, items
+
+    # print(game_state['player']['room'])
 
     while dead is False:
         if player.room.visits is False:
@@ -56,12 +54,17 @@ def game_loop():
 # Main function ------------------ #
 def main():
     """Define main function. Load State. Start game."""
-    global game_state, rooms
+    global game_state, rooms, characters, items
 
     game_state = dict(common.functionality.start())
-    rooms = common.functionality.build_rooms(game_state)  # Builds room objects
-    player.name = playerName
-    player.room = rooms[room]  # from line 19
+
+    # Build world
+
+    rooms, characters, items = common.functionality.build_world(game_state)
+
+    # Create and place player
+    player.name = "Kevin"  # input('> ')
+    player.room = rooms[game_state['player']['room']]
     game_loop()
 
 

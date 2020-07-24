@@ -1,11 +1,31 @@
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is a list of commands at your disposal
 ===========================================
+
+Load/Save
+---------
+
+load: Loading should happen automatically if there is a savegame present.
+save: Save game state
+
 
 Movement
 --------
 
 Cardinals and ordinals, i.e. N, NE, E, SE, S, SW, W, NW
 
+
+Interactions
+------------
+
+talk:
+
+take:
+
+use:
+
 To be continued...
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

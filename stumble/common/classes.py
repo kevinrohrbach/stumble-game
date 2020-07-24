@@ -42,7 +42,7 @@ class Character():
 
     global game_state
 
-    def __init__(self, game_state, name, room):
+    def __init__(self, game_state, name):
         """Hold all the character attributes."""
         self.name = None  # character name
         self.description = None
@@ -58,9 +58,9 @@ class Player(Character):
 
     global game_state
 
-    def __init__(self, game_state, name, room):
+    def __init__(self, game_state, name):
         """Hold extra player attributes."""
-        Character.__init__(self, game_state, name, room)
+        Character.__init__(self, game_state, name)
 
     def move(self, direction):
         """Define player's movement."""
@@ -74,7 +74,9 @@ class Player(Character):
 class Item():
     """This class represents items in the game."""
 
-    def __init__(self):
+    global game_state
+
+    def __init__(self, game_state, name):
         """Hold all fields for Item."""
         self.name = ""  # name of the object
         self.description = ""  # description of item to be printed

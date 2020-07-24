@@ -467,23 +467,34 @@
       "visits": false
     }
   },
-  "characters": [{
+  "characters": {
     "madman": {
       "name": "Madman",
-      "descr": ""
+      "descr": "",
+      "room": "madroom",
+      "conversation":"",
+      "madness": "",
+      "inventory": []
     },
     "dwarf": {
       "name": "Dwarf",
-      "descr": ""
+      "descr": "",
+      "room": "madroom",
+      "conversation":"",
+      "madness": "",
+      "inventory": []
     }
-  }],
-  "items": [{
-
-  }],
+  },
   "player": {
     "name": null,
     "room": "bedroom",
     "madness": 0,
     "inventory": []
+  },
+  "items": {
+    "sledgehammer": {
+      "name": "Thor's Hammer",
+      "descr": null
+    }
   }
 }
