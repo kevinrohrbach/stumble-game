@@ -448,7 +448,7 @@
       "visits": false
     },
     "freedom": {
-      "name": "Dailight",
+      "name": "Daylight",
       "descr_light": "Your first breath of fresh air feels sweet in your lungs. After what seems like a lifetime you can finally see the sky. You vow that from now on you'll never get into a situation again where you're stumbling through the dark.",
       "descr_dark": null,
       "exits": {

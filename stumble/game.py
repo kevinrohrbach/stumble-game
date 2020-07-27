@@ -31,9 +31,9 @@ def game_loop():
             common.Room.set_visit(player.room, True)
         elif player.room.visits is True:
             common.Room.get_name(player.room)
-        command = input('\n> ')
-        if command in {'N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW', 'U', 'D'}:
-            player_move = player.move(command)
+        command = input('\n> ').lower()
+        if command in {'n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw', 'u', 'd'}:
+            player_move = player.move(command.upper())
             if player_move is not None:
                 player.room = rooms[player_move]
             pass
@@ -44,7 +44,8 @@ def game_loop():
         elif command == 'print':
             print(game_state)  # This needs to do soemthing more meaningful
         elif command == 'save':
-            common.functionality.save_game()
+            common.functionality.save_game(rooms, characters, items)
+            exit(0)  # TODO: remove in production so save without quit poss.
         else:
             print('Invalid command.')
     dead = True
@@ -58,11 +59,9 @@ def main():
 
     game_state = dict(common.functionality.start())
 
-    # Build world
-
+# Build world
     rooms, characters, items = common.functionality.build_world(game_state)
-
-    # Create and place player
+# Create and place player
     player.name = "Kevin"  # input('> ')
     player.room = rooms[game_state['player']['room']]
     game_loop()
