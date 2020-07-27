@@ -1,5 +1,7 @@
 """Define classes."""
 
+import textwrap
+
 
 # Room Classes ------------------------------------------------ #
 class Room():
@@ -29,7 +31,7 @@ class Room():
         print('\n')
         print(self.name)
         print("----------------")
-        print(self.descr_light)
+        print(textwrap.fill(self.descr_light, 80))
 
     def set_visit(self, value):
         """Set to visited."""
