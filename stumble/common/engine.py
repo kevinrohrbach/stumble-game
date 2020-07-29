@@ -104,6 +104,7 @@ def create_characters(data):
 def spawn_player(data, name):
     """Spawn character from game_state."""
     player = common.Player(data, name)
+    player.inventory.append(game_state['player']['inventory'])
     return player
 
 

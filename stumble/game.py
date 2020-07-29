@@ -63,7 +63,7 @@ def main():
     locations, characters, items = common.engine.build_world(game_state)
 # Create and place player
     name = 'Kevin'  # input('> ')
-    player = common.engine.spawn_player(game_state,name)
+    player = common.engine.spawn_player(game_state, name)
     player.location = locations[game_state['player']['location']]
     print(player.__dict__)
     game_loop()

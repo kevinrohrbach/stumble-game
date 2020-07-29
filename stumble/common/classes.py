@@ -43,13 +43,13 @@ class Character():
 
     def __init__(self, game_state, name):
         """Hold all the character attributes."""
-        self.name = game_state['characters'][character]['name']
+        self.name = name
         self.description = None
         self.location = None
         self.conversation = None
         self.madness = 0  # charter madness (maybe use 1-10)
         self.dead = False
-        self.inventory = game_state['characters'][character]['inventory']
+        self.inventory = []
         # TODO: Add more character attributes
 
 
