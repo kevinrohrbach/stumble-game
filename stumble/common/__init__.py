@@ -1,4 +1,4 @@
 """Import classes."""
 
-import common.functionality
-from common.classes import Room, Character, Player, Item
+import common.engine
+from common.classes import Location, Character, Player, Item

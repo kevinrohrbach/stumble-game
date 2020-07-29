@@ -2,7 +2,6 @@
 
 import time
 import json
-import jsonpickle
 import jsons
 from os import path
 import common
@@ -17,21 +16,22 @@ def load_game():
     command = input("Do you want to load your existing game? (y/n)\n> ")
     if command == "y":
         with open(SAVEGAME_FILENAME, 'r') as savegame:
-            state = jsonpickle.decode(savegame.read())
+            state = json.load(savegame)
         return state
     else:
         state = initialize_game()
         return state
 
 
-def save_game(rooms, chars, items):
+def save_game(locations, chars, items):
     """Save the current game state."""
     global game_state
     print('You seriously want to chicken out and save?')
     command = input('\n>')
     if command == 'y':
-        for location in rooms:
-            game_state['rooms'].update({location: jsons.dump(rooms[location])})
+        for location in locations:
+            game_state['locations'].update(
+                {location: jsons.dump(locations[location])})
         for perp in chars:
             game_state['characters'].update({perp: jsons.dump(chars[perp])})
         for i in items:
@@ -62,14 +62,14 @@ def start():
 # World building ------------------------ #
 def build_world(data):
     """Build game world."""
-    room_load = "Building rooms"
+    location_load = "Building locations"
     character_load = "Placing characters"
     item_load = "Hiding items"
     for i in range(4):
-        print(f"{room_load}", end='\r')
-        room_load += "."
+        print(f"{location_load}", end='\r')
+        location_load += "."
         time.sleep(0.1)
-    rooms = build_rooms(data)
+    locations = build_locations(data)
     print("\r")
     for i in range(4):
         print(f"{character_load}", end='\r')
@@ -83,15 +83,15 @@ def build_world(data):
         time.sleep(0.1)
     items = create_items(data)
     print("\r\r\r")
-    return rooms, characters, items
+    return locations, characters, items
 
 
-def build_rooms(data):
-    """Build rooms out of game_state."""
-    rooms = {}
-    for location in data['rooms']:
-        rooms.update({location: common.Room(data, location)})
-    return rooms
+def build_locations(data):
+    """Build locations out of game_state."""
+    locations = {}
+    for location in data['locations']:
+        locations.update({location: common.Location(data, location)})
+    return locations
 
 
 def create_characters(data):
@@ -100,6 +100,10 @@ def create_characters(data):
     for location in data['characters']:
         characters.update({location: common.Character(data, location)})
     return characters
+
+def spawn_player(data, name):
+    """Spawn character from game_state."""
+    player = common.Player(data, name)
 
 
 def create_items(data):

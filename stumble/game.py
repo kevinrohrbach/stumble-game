@@ -9,61 +9,66 @@ import common
 # load universe ---------------- #
 
 game_state = dict()
-rooms = dict()
+locations = dict()
 characters = dict()
 items = dict()
 
 playerName = None
-player = common.Player(game_state, playerName)
+player = common.Player(game_state)
 
 
 # # Main game --------------------- #
 def game_loop():
     """Define main game loop."""
-    dead = False
-    global game_state, rooms, characters, items
+    global game_state, locations, characters, items
 
-    # print(game_state['player']['room'])
+    # print(game_state['player']['location'])
 
-    while dead is False:
-        if player.room.visits is False:
-            common.Room.get_details(player.room)
-            common.Room.set_visit(player.room, True)
-        elif player.room.visits is True:
-            common.Room.get_name(player.room)
+    while player.dead is False:
+        if player.location.visits is False:
+            common.Location.get_details(player.location)
+            common.Location.set_visit(player.location, True)
+        elif player.location.visits is True:
+            common.Location.get_name(player.location)
         command = input('\n> ').lower()
         if command in {'n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw', 'u', 'd'}:
             player_move = player.move(command.upper())
             if player_move is not None:
-                player.room = rooms[player_move]
+                player.location = locations[player_move]
             pass
         elif command == 'look':
-            print(player.room.descr_light)
+            print(common.Location.get_details(player.location))
         elif command == 'help':
-            common.functionality.show_help()
+            common.engine.show_help()
         elif command == 'print':
             print(game_state)  # This needs to do soemthing more meaningful
         elif command == 'save':
-            common.functionality.save_game(rooms, characters, items)
+            common.engine.save_game(locations, characters, items)
             exit(0)  # TODO: remove in production so save without quit poss.
+        elif command == 'inventory':
+            player.list_inventory()
         else:
             print('Invalid command.')
-    dead = True
+    player.dead = True
     exit(0)
+# TODO: Move most of command tree into engine
 
 
 # Main function ------------------ #
 def main():
     """Define main function. Load State. Start game."""
-    global game_state, rooms, characters, items
+    global game_state, locations, characters, items
 
-    game_state = dict(common.functionality.start())
+    game_state = dict(common.engine.start())
 
 # Build world
-    rooms, characters, items = common.functionality.build_world(game_state)
+    locations, characters, items = common.engine.build_world(game_state)
 # Create and place player
-    player.name = "Kevin"  # input('> ')
-    player.room = rooms[game_state['player']['room']]
+    name = 'Kevin'  # input('> ')
+    player = common.engine.spawn_player(game_state)
+    player.location = locations[game_state['player']['location']]
+    print(player.name)
+    print(player.inventory)
     game_loop()
 
 
