@@ -14,15 +14,13 @@ characters = dict()
 items = dict()
 
 playerName = None
-player = common.Player(game_state)
+player = common.Player(game_state, playerName)
 
 
 # # Main game --------------------- #
 def game_loop():
     """Define main game loop."""
-    global game_state, locations, characters, items
-
-    # print(game_state['player']['location'])
+    global game_state, locations, characters, player, items
 
     while player.dead is False:
         if player.location.visits is False:
@@ -57,7 +55,7 @@ def game_loop():
 # Main function ------------------ #
 def main():
     """Define main function. Load State. Start game."""
-    global game_state, locations, characters, items
+    global game_state, locations, characters, player, items
 
     game_state = dict(common.engine.start())
 
@@ -65,10 +63,9 @@ def main():
     locations, characters, items = common.engine.build_world(game_state)
 # Create and place player
     name = 'Kevin'  # input('> ')
-    player = common.engine.spawn_player(game_state)
+    player = common.engine.spawn_player(game_state,name)
     player.location = locations[game_state['player']['location']]
-    print(player.name)
-    print(player.inventory)
+    print(player.__dict__)
     game_loop()
 
 

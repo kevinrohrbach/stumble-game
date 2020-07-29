@@ -41,15 +41,15 @@ class Character():
 
     global game_state
 
-    def __init__(self, game_state):
+    def __init__(self, game_state, name):
         """Hold all the character attributes."""
-        self.name = None  # character name
+        self.name = game_state['characters'][character]['name']
         self.description = None
         self.location = None
         self.conversation = None
         self.madness = 0  # charter madness (maybe use 1-10)
         self.dead = False
-        self.inventory = ()
+        self.inventory = game_state['characters'][character]['inventory']
         # TODO: Add more character attributes
 
 
@@ -59,9 +59,9 @@ class Player(Character):
 
     global game_state
 
-    def __init__(self, game_state):
+    def __init__(self, game_state, name):
         """Hold extra player attributes."""
-        super().__init__(game_state)
+        super().__init__(game_state, name)
 
     def set_name(self, name):
         """Set player's name."""

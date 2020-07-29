@@ -97,20 +97,21 @@ def build_locations(data):
 def create_characters(data):
     """Build characters out of game_state."""
     characters = {}
-    for location in data['characters']:
-        characters.update({location: common.Character(data, location)})
+    for character in data['characters']:
+        characters.update({character: common.Character(data, character)})
     return characters
 
 def spawn_player(data, name):
     """Spawn character from game_state."""
     player = common.Player(data, name)
+    return player
 
 
 def create_items(data):
     """Build items out of game_state."""
     items = {}
-    for location in data['items']:
-        items.update({location: common.Item(data, location)})
+    for item in data['items']:
+        items.update({item: common.Item(data, item)})
     return items
 
 
